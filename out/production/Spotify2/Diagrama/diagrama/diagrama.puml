@@ -1,0 +1,57 @@
+
+
+@startuml
+ class Album
+{
+    +String name
+    +Artist artist
+    +Genre genre
+    +public Album();
+}
+
+class Artist{
+  +String name;
+  +Integer age;
+  +String Nationality;
+  public Artist();
+}
+class Song{
++String name
++Double duration
++Genres genre
++Album album
++Artist collab
+public Song();
+}
+enum Genres{
++Rock, Jazz, Trap
+ Jazz, Hip Hop, Pop
+ Metal, Clasica
+-Genres(String description);
+-String getDescription();
+}
+Interface Playing{
++Play
++AddSong
++EraseSong
++SeeList
+}
+class BasicList implements Playing{
++String name
++Stack<Song> myList
+Play();
+AddSong();
+SeeList();
+EraseSong();
+}
+class PremiumList implements Playing{
++ String name
++LinkedList<Song> myList
+Play();
+AddSong();
+SeeList();
+EraseSong();
+}
+
+@enduml
+
